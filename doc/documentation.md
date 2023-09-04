@@ -1,7 +1,5 @@
 # SetsC
 
-Esta documentação explica como a calculadora de conjuntos funciona. Trata-se de uma calculadora capaz de realizar operações com conjuntos numéricos.
-
 ## Estratégia utilizada
 
 O objetivo deste código é servir como uma biblioteca de funções úteis, funcionais e aplicáveis para trabalhar e realizar operações matemáticas de conjuntos. De forma geral, este trabalho é orientado a estas operações, onde cada uma é expressa, no código, por uma função. 
