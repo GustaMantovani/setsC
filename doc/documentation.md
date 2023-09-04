@@ -1,4 +1,4 @@
-# Calculadora de Conjuntos
+# SetsC
 
 Esta documentação explica como a calculadora de conjuntos funciona. Trata-se de uma calculadora capaz de realizar operações com conjuntos numéricos.
 
