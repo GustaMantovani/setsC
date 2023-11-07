@@ -8,7 +8,7 @@ Assim, cada operação trabalha com uma relação entre o conjunto A e o conjunt
 
 Os conjuntos, no código, são expressos por arrays com tamanho dinamicamente alocado, esta é uma abordagem superior à alocação fixa, pois evita usos desnecessários de memória, além de aumentar a flexibilidade do programa, sendo apto para trabalhar com tantos elementos quanto a memória permitir.
 
-O conjunto C é expresso e referenciado por um ponteiro para uma região de memória com tamanho dinamicamente alocado de acordo com a operação que se deseja realizar. Após isso, o conjunto C é exibido na tela. Além disso, as  funções do código baseiam-se nas fórmulas matemáticas de conjuntos, dessa forma, têm a mesma fundamentação lógica. 
+O conjunto C é expresso e referenciado por um ponteiro para uma região de memória com tamanho dinamicamente alocado de acordo com a operação que se deseja realizar. As  funções do código baseiam-se nas fórmulas matemáticas de conjuntos, dessa forma, têm a mesma fundamentação lógica. 
 
 Todas as funções retornam um array com o conjunto resultante. Esta abordagem vai além da mera exibição dos resultados, pois permite uma implementação mais fexível que realmente manipula dados. 
 
@@ -49,7 +49,8 @@ Iniciando com a inicialização de *cardC para 0, a função utiliza loops for p
 Quando um elemento é identificado para o conjunto de diferença, incrementa-se o valor de *cardC para acompanhar o tamanho do conjunto resultante. Se *cardC for maior que 0, a função aloca memória dinamicamente para o conjunto de diferença c usando malloc. Se a alocação falhar, uma mensagem de erro é exibida e a função retorna -1.
 
 Após a alocação de memória bem-sucedida, um novo conjunto é criado da mesma forma que na função intersecao, utilizando loops aninhados para copiar os elementos do conjunto a que não estão presentes no conjunto b. O conjunto resultante é, então, ordenado usando a função bubbleSort para garantir que os elementos estejam em ordem crescente.
-soma:
+
+#### soma:
 
 A função soma gera um conjunto que representa a união de dois conjuntos de inteiros. Especificamente, ela calcula a soma de dois conjuntos a e b, formando um novo conjunto que contém todos os elementos de ambos os conjuntos. Ao receber os arrays a e b, os tamanhos dos conjuntos cardA e cardB, um ponteiro para um ponteiro de array c e um inteiro cardC que armazenará o resultado, a função inicia seu processo.
 
