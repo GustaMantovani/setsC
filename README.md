@@ -2,6 +2,6 @@
 
 ## Proposta
 
-setsC é uma biblioteca de funções em C de minha autoria criada para se realizar operações matemáticas de conjuntos numéricos entre arrays em C, o que não é suportado pelas funções padrões de C, diferente do python, que tem bibliotecas com a mesma finalidade e aplicação do código desenvolvido neste projeto. O objetivo é que isto  sirva como uma biblioteca de funções úteis, funcionais e aplicáveis para trabalhar e realizar operações matemáticas de conjuntos. De forma geral, este trabalho é orientado a estas operações, onde cada uma é expressa, no código, por uma função. 
+SetsC é uma biblioteca de funções em C que eu mesmo desenvolvi com o propósito de realizar operações matemáticas envolvendo conjuntos numéricos por meio de arrays, suprindo uma lacuna não abordada pelas funções padrões em C. Esse diferencial destaca-se em relação ao Python, que possui bibliotecas com a mesma finalidade e aplicação do código elaborado neste projeto. O intuito primordial é proporcionar uma coleção de funções úteis, funcionais e aplicáveis para executar e manipular operações matemáticas em conjuntos. Em linhas gerais, o foco principal deste trabalho concentra-se nessas operações, cada uma sendo representada no código por meio de uma função dedicada.
 
 É necessário ler a [documentação](/doc/documentation.md).
