@@ -38,7 +38,7 @@ Inicialmente, o processo inicia definindo `*cardC` como 0 para acompanhar a quan
 
 Se `*cardC` for maior que zero, sinaliza-se a presença de ao menos um elemento compartilhado. Neste caso, a função aloca dinamicamente memória para o conjunto de interseção `c` utilizando `malloc`. Falhas na alocação de memória resultam em uma mensagem de erro e retorno de -1.
 
-Após uma alocação bem-sucedida, um novo conjunto é construído novamente por meio de loops aninhados. Os elementos presentes tanto em `a` quanto em `b` são copiados para o conjunto `c`, controlados pelo contador `contC`. Posteriormente, o conjunto resultante é ordenado utilizando a função `bubbleSort`, garantindo a ordenação crescente dos elementos.
+Após uma alocação bem-sucedida, um novo conjunto é construído novamente por meio de loops aninhados. Os elementos presentes tanto em `a` quanto em `b` são copiados para o conjunto `c`, controlados pelo contador `contC`. Posteriormente, o conjunto resultante é ordenado utilizando a função `quicksort`, garantindo a ordenação crescente dos elementos.
 
 #### diferenca:
 
@@ -48,7 +48,7 @@ Começando com a inicialização de `*cardC` como 0, a função percorre os elem
 
 Quando `*cardC` é maior que 0, a função aloca dinamicamente memória para o conjunto diferença `c` usando `malloc`. Caso ocorra falha na alocação, a função exibe uma mensagem de erro e retorna -1.
 
-Após a alocação bem-sucedida, a função cria um novo conjunto diferença, copiando os elementos de `a` que não estão presentes em `b` por meio de loops aninhados. Em seguida, o conjunto resultante é ordenado usando a função `bubbleSort` para garantir que os elementos estejam em ordem crescente.
+Após a alocação bem-sucedida, a função cria um novo conjunto diferença, copiando os elementos de `a` que não estão presentes em `b` por meio de loops aninhados. Em seguida, o conjunto resultante é ordenado usando a função `quicksort` para garantir que os elementos estejam em ordem crescente.
 
 #### soma:
 
@@ -58,7 +58,7 @@ Iniciando com a inicialização de `contC` para 0, a função calcula `*cardC` c
 
 Após uma alocação de memória bem-sucedida, a função inicia a construção do conjunto de união. Ela percorre o conjunto `a` utilizando um loop `for`, copiando cada elemento para o conjunto de união `c` e incrementando `contC`. Em seguida, percorre o conjunto `b` de maneira similar, copiando cada elemento para o conjunto `c` e novamente incrementando `contC`.
 
-O conjunto resultante, agora contendo todos os elementos de `a` e `b`, é ordenado utilizando a função `bubbleSort` para assegurar que os elementos estejam em ordem crescente. Essa ordenação é realizada para organizar adequadamente os elementos no conjunto resultante.
+O conjunto resultante, agora contendo todos os elementos de `a` e `b`, é ordenado utilizando a função `quicksort` para assegurar que os elementos estejam em ordem crescente. Essa ordenação é realizada para organizar adequadamente os elementos no conjunto resultante.
 
 #### uniao:
 
@@ -68,7 +68,7 @@ Inicialmente, a função cria ponteiros temporários `iAB` e `dBIAB` para armaze
 
 Quando as operações de interseção e diferença são bem-sucedidas, a função continua realizando a soma entre o conjunto a e o resultado da diferença `B - (A ∩ B)`, utilizando a função auxiliar `soma`. Se a operação de soma falhar (retorna -1), a função novamente libera a memória alocada até esse ponto e retorna -1.
 
-Após a operação de soma bem-sucedida, a função libera a memória alocada para os conjuntos intermediários `iAB` e `dBIAB`, uma vez que esses resultados não são mais necessários. Em seguida, o conjunto resultante da união é ordenado utilizando a função `bubbleSort` para garantir que os elementos estejam em ordem crescente.
+Após a operação de soma bem-sucedida, a função libera a memória alocada para os conjuntos intermediários `iAB` e `dBIAB`, uma vez que esses resultados não são mais necessários. Em seguida, o conjunto resultante da união é ordenado utilizando a função `quicksort` para garantir que os elementos estejam em ordem crescente.
 
 #### diferencaSimetrica:
 
@@ -78,7 +78,7 @@ Iniciando o processo, a função cria ponteiros temporários `dAB` e `dBA` para 
 
 Quando as operações de diferença são bem-sucedidas, a função avança para realizar a união entre os resultados das diferenças `A - B` e `B - A`, utilizando a função auxiliar `uniao`. Se a operação de união falhar (retorna -1), a função novamente libera a memória alocada até esse ponto e retorna -1.
 
-Após a operação de união bem-sucedida, a função libera a memória alocada para os conjuntos intermediários `dAB` e `dBA`, uma vez que esses resultados não são mais necessários. Em seguida, o conjunto resultante da diferença simétrica é ordenado utilizando a função `bubbleSort` para garantir que os elementos estejam em ordem crescente.
+Após a operação de união bem-sucedida, a função libera a memória alocada para os conjuntos intermediários `dAB` e `dBA`, uma vez que esses resultados não são mais necessários. Em seguida, o conjunto resultante da diferença simétrica é ordenado utilizando a função `quicksort` para garantir que os elementos estejam em ordem crescente.
 
 #### produtoCartesiano:
 
@@ -90,4 +90,4 @@ Em seguida, a função aloca dinamicamente memória para o conjunto de produto c
 
 Após uma alocação bem-sucedida, a função utiliza dois loops aninhados para percorrer todas as combinações possíveis de elementos entre os conjuntos `a` e `b`. Para cada par de elementos, a função copia os elementos correspondentes para o conjunto de produto cartesiano `c`, incrementando `cont` em duas unidades a cada iteração para acomodar os pares ordenados.
 
-Uma vez preenchido o conjunto resultante, é realizado um processo de ordenação utilizando a função `bubbleSort` para garantir que os elementos estejam em ordem crescente, organizando corretamente os pares ordenados no conjunto resultante.
+Uma vez preenchido o conjunto resultante, é realizado um processo de ordenação utilizando a função `quicksort` para garantir que os elementos estejam em ordem crescente, organizando corretamente os pares ordenados no conjunto resultante.

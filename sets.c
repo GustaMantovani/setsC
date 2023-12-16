@@ -13,15 +13,28 @@ int veirificaRepeticao(int *vet, int i, int elemento) {
   return 0;
 }
 
-void bubbleSort(int *arr, int size) {
-  for (int i = 0; i < size - 1; i++) {
-    for (int j = 0; j < size - i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        int temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
+int partition(int vetor[], int inicio, int fim) {
+  int menores = inicio - 1;
+  int pivo = vetor[fim];
+  for (int maiores = inicio; maiores < fim; maiores++) {
+    if (vetor[maiores] <= pivo) {
+      menores++;
+      int aux = vetor[menores];
+      vetor[menores] = vetor[maiores];
+      vetor[maiores] = aux;
     }
+  }
+  int aux = vetor[menores + 1];
+  vetor[menores + 1] = vetor[fim];
+  vetor[fim] = aux;
+  return menores + 1;
+}
+
+void quicksort(int vetor[], int inicio, int fim) {
+  if (inicio < fim) {
+    int iPartition = partition(vetor, inicio, fim);
+    quicksort(vetor, inicio, iPartition - 1);
+    quicksort(vetor, iPartition + 1, fim);
   }
 }
 
@@ -53,7 +66,7 @@ int intersecao(int *a, int cardA, int *b, int cardB, int **c, int *cardC) { // e
       }
     }
   }
-  bubbleSort(*c, *cardC);
+  quicksort(*c, 0, *cardC-1);
   return 0;
 }
 
@@ -93,7 +106,7 @@ int diferenca(int *a, int cardA, int *b, int cardB, int **c, int *cardC) { // A-
       }
     }
   }
-  bubbleSort(*c, *cardC);
+  quicksort(*c, 0, *cardC-1);
   return 0;
 }
 
@@ -120,7 +133,7 @@ int soma(int *a, int cardA, int *b, int cardB, int **c, int *cardC) {
     (*c)[contC] = b[i];
     contC++;
   }
-  bubbleSort(*c, *cardC);
+  quicksort(*c, 0, *cardC-1);
   return 0;
 }
 
@@ -157,7 +170,7 @@ int uniao(int *a, int cardA, int *b, int cardB, int **c, int *cardC) { // A + (B
     return -1;
   }
   
-  bubbleSort(*c, *cardC);
+  quicksort(*c, 0, *cardC-1);
   return 0;
 }
 
@@ -192,7 +205,7 @@ int diferencaSimetrica(int *a, int cardA, int *b, int cardB, int **c, int *cardC
   if (v == -1) {
     return -1;
   }
-  bubbleSort(*c, *cardC);
+  quicksort(*c, 0, *cardC-1);
   return 0;
 }
 
@@ -208,8 +221,8 @@ int produtoCartesiano(int *a, int cardA, int *b, int cardB, int **c, int *cardC)
       printf("Erro ao alocar memória para o array A.\n");
       return -1;
     }
-    bubbleSort(a, cardA);
-    bubbleSort(b, cardB);
+    quicksort(a, 0, cardA-1);
+    quicksort(b, 0, cardB-1);
   }
 
   for (int i = 0; i < cardA; i++) {
