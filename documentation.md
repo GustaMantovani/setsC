@@ -18,7 +18,7 @@ Agora vamos explicar cada parte do código individualmente.
 
 ### Bibliotecas utilizadas
 
-Foram utilizadas somente as bibliotecas padrão do C. A biblioteca stdio.h contém as funções de entrada e saída de dados para o usuário. A biblioteca stdlib.h contém as funções de gerenciamento de memória que são utilizadas para a alocação dinâmica do tamanho dos arrays que representam conjuntos. 
+Foram utilizadas somente as bibliotecas padrão do C. A biblioteca `stdio.h` contém as funções de entrada e saída de dados para o usuário. A biblioteca `stdlib.h` contém as funções de gerenciamento de memória que são utilizadas para a alocação dinâmica do tamanho dos arrays que representam conjuntos. 
 
 ### Funções
 
